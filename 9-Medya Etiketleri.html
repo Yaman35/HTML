@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+    <html lang="tr">
+
+<head>
+
+    <meta charset="utf-8">
+
+<title> MEDYA ETİKETLERİ </title>  
+
+</head>
+
+<body>
+
+    <audio controls loop muted> <!-- 2 Çeşit kullanımı mevcuttur-->
+
+        <source src="mp3/inna-maza-jaja-official.mp3" type="audio/mpeg">
+
+            Tarayıcınız bu özelliği desteklemiyor <!--Eğer eski bir tarayıcı ile açılmaya çalışırsa bu yazı gözükür-->
+
+    </audio>
+
+    <br><br> <!-- Veya aşağıdaki şekilde de kullanılabilir-->
+
+    <audio controls src="mp3/inna-maza-jaja-official.mp3"></audio>
+
+    <br><br><br>
+
+    <video width="320" height="240" controls loop poster="img/Paranormal.jpg">
+
+        <source src="video/test video.mp4" type="video/mp4">
+
+            Tarayıcınız bu özelliği desteklemiyor <!--Eğer eski bir tarayıcı ile açılmaya çalışırsa bu yazı gözükür-->
+
+
+            <!--Videolara altyazı ekleme formatı ise-->
+
+    <track src="subtitles-en.vtt" kind="subtitles" srclang="en" label="English">
+    <track src="subtitles-de.vtt" kind="subtitles" srclang="de" label="Deutsch">   <!-- şeklindedir-->
+
+    </video>
+
+
+</body>
+
+</html>

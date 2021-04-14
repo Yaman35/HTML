@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+    <html lang="tr">
+<head>
+    <meta charset="utf-8">
+<title> TABLO ETİKETLERİ </title>  
+
+</head>
+
+<body>
+
+    <table border="1"> <!--kırmızı olması demek artık kullanılmadığı anlamına geliyor-->
+
+        <caption>İSİM SOYİSİM</caption>
+
+        <thead> <!-- Başlıkla ilgili olan kısımlar buraya yazılır-->
+
+                <tr>
+
+                <th>Ad</th> <!--1.Başlık-->
+                <th>Soyad</th> <!--2.Başlık-->
+                
+                </tr>
+
+        </thead>
+
+        <tbody> <!-- Body ile ilgili olan kısımlar buraya yazılır-->
+
+                <tr> <!--1. Satır ifadesi-->
+
+                    <td>Hüseyin </td> <!--1. Satır 1. Sütun ifadesi-->
+        
+                    <td> Yaman </td> <!--1. Satır 2. Sütun ifadesi-->
+        
+                </tr>
+        
+        
+        
+                <tr>
+        
+                    <td>Emine </td> <!--2. Satır 1. Sütun ifadesi-->
+        
+                    <td> Yaman </td> <!--2. Satır 2. Sütun ifadesi-->
+        
+                </tr>
+        
+
+
+        </tbody>
+
+    </table>
+
+
+
+    <br><br><br><br><br> <!-- İki tablo arasındaki boşluk-->
+
+
+
+    <table border="10">
+
+        <caption>MY SALARY</caption>
+
+        <thead> 
+
+                <tr>
+
+                <th>MONTH</th> 
+                <th>SALARY</th> 
+                <th>RESULT</th>
+                
+                </tr>
+
+        </thead>
+
+        <tbody> 
+
+                <tr> 
+
+                    <td> JANUARY </td> <!--(Aslında buraya rowspan=3 koysaydım 1. sütundaki ilk 3 satırı birleştir demek olacaktı)-->
+        
+                    <td> 5000$ </td> 
+
+                    <td rowspan="3"> VICTORY!!! </td> <!--2/3/4 SATIRI BİRLEŞTİRMEYE YARAR. (Aslında 3. sütundaki ilk 3 satırı birleştir demek)--> 
+        
+                </tr>
+        
+        
+        
+                <tr>
+        
+                    <td> FEBRUARY </td> 
+        
+                    <td> 3500$ </td> 
+        
+                </tr>
+
+
+                <tr>
+        
+                    <td> MARCH </td> 
+        
+                    <td> 4500$ </td> 
+        
+                </tr>
+
+
+
+        <tfoot>  <!-- Buradaki yerinin değişmesi çok önemli değil yine de gösteriyor tablodaki yerini-->
+                    <tr>
+                        <td>
+                            Toplam:
+                        </td>
+        
+                        <td>
+                            13.000$
+                        </td>
+                    </tr>
+
+                    <!--VEYA-->
+
+                    <tr>
+                        <td colspan="2"> <!--2/3/4 VS SÜTUNU BİRLEŞTİRMEYE YARAR-->
+                            Toplam:13000$
+                        </td>
+        
+                    </tr>
+
+
+        </tfoot>
+        
+
+
+        </tbody>
+
+        
+
+    </table>
+
+
+    </body>
+
+</html>

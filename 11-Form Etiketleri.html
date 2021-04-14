@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+    <html lang="tr">
+<head>
+    <meta charset="utf-8">
+<title> FORM ETİKETLERİ </title>  
+
+</head>
+
+<body>
+
+    <form action="" method="GET" id="form1"> <!--action etiketi ile doldurulan formun nereye gönderileceği belirlenmektedir. id ise form dışı inputlatı form için kullanabilmeye yarar.örnek aşağıdadır-->
+
+<fieldset> <!--Forum elemanlarını gruplama işine yarar, frame içerisinde toplar-->
+     <legend><b>Giriş Yap</b></legend> <!--Gruplara başlık vermek için kullanılır-->
+
+       <input type="text" required autofocus> <b>Adınızı Giriniz...</b> <br><br> <!--required etiketi alanın kullanıcı tarafından mutlaka doldurulması gereken bir alan olduğunu belirtmek içimn kullanılır-->
+                                                                             <!--autofocus seçeneği ile sayfa açılır açılmaz cursor ın istenilen alanda olması sağlanabilir-->
+
+       <input placeholder="Kullanıcı adınızı giriniz" type="text"> <br><br> <!--Kullanıcı birşey girene kadar ekranda gözükecek olan ifadedir-->
+
+       <!--veya şöyle de kullanılabilir-->
+
+       <input placeholder="Kullanıcı adını giriniz" type="text" required id="kadi" autocomplete="off"> <!--placeholder etiketi ile input kutucuğu içinde kullanıcı birşey yazana kadar görülmesini istediğimiz yazıyı gösterebiliriz-->
+       <label for="kadi"> (Zorunlu alan) </label> <br><br>                                             <!--autocomplete='off' seçeneği ile önceden yazılmış olanları öneri olarak görmek istemiyorsak kullanırız-->
+       
+       (Text önde de olabilir) <input type="text" required><br> <br>
+       
+       <input type="text" value="Lütfen isminizi giriniz...">(Bu şekilde box içi dolu da gösterilebilir) <br><br>
+       
+       <input type="text" disabled value=" Bu alanı değiştiremezsiniz!!!">(disabled etiketi ile)<br><br> <!--disabled etiketi alanın kullanıcı tarafından değiştirilememesi için kullanılır-->
+       
+       <input type="text" readonly value=" Bu alanı değiştiremezsiniz!!!">(readonly etiketi ile)<br><br> <!--readonly etiketi de aynı amaçla kullanılır lakin yazılım kullanımı ve değerler için readonly kullanmak daha mantıklıdır-->
+
+       <button type="submit"> GİRİŞ YAP </button> <!--Butonları oluşturmak için kullanılır--> <br><br>
+
+</fieldset>
+
+<fieldset> <!--disabled niteliği ekleyerek gruptaki bütün elemanları toptan disabled yapabiliyorsun-->
+    <legend><b> Zorunlu Alanlar </b></legend>
+
+       <input required id="zorunlu" type="text" autocomplete="off" > <!--autocomplete etiketi alana basıldığında daha önce yazılan seçenekleri görmeyi engeller -->
+       <label for="zorunlu"> (Gönder butonuna basıldığında eğer bu alan boşsa uyarı verir) </label><br><br>
+
+       <!--Şöyle bir kullanım da var. Kullanıcı label üzerine tıkladığında box üzerine focuslanmasını sağlar-->
+
+       <input  id="kadi" type="text" required>
+       <label for="kadi">Kullanıcı Adı. (Kullanıcı buraya tıkladığında cursor box içine gelir,focuslanır)</label><br><br>
+
+       <input type="password" required maxlength="8"> <b>Şifrenizi Giriniz...</b><br><br>
+
+       <!--veya-->
+
+       <input required id="sifre" type="password" maxlength="8">
+       <label for="sifre">Şifre. (Kullanıcı buraya tıkladığında cursor box içine gelir,focuslanır)</label><br><br>
+      
+       <input type="password" maxlength="8"> Şifrenizi giriniz. Max.8 karakter kullanılabilir. <br><br> <!--maxlength etiketi girilebilecek max. karakter sayısını belirlemek için kullanılır-->
+       
+       <input type="email" required id="Email">
+       <label for="Email">E-mail adresiniz</label><br><br>
+
+       <input type="file" accept="image/png" accept="image/jpeg" accept="image/*" name="dosya[]" multiple> <b>Bir dosya seçiniz...</b><br><br> <!--accept etikei ile kullanıcının sadece bir dosya türü veya uzantı seçebilmesi belirlenebilir yada * ile tüm iamge tipleri kabul edilebiir mesela-->
+                                                                                                                            <!--multiple etiketi ile birden fazla dosya seçilebilir hale getirebiliriz. name="dosya[]" kullanımı ise programlama dili için gereklidir yoksa normalde bunsuz seçilebiliyor-->  
+       
+       <!--veya-->
+
+       <input id="dosya" type="file">
+       <label for="dosya">Dosya seç. (Kullanıcı buraya tıkladığında dosya seçme aktif hale gelir)</label><br><br> <!--Tüm texti aktifleştirmek için böyle label ile kullanılabilir-->
+
+
+       <label>
+
+        <input type="radio" name="cinsiyet" value="Erkek" checked> Erkek <!--name etiketi ikisine de yazılırsa kullanıcı artık yalnızca bir seçeneği seçebilir aksi takdirde iki seçenekte seçibilir ki bu radio kullanımına ters-->
+                                                                 <!--value etiketi yazılım dili kullanıldığında kullanıcı herhangi bir seçenek seçtikten sonra arka planda o değer kullanılabilsin diye kullanılmalıdır-->
+                                                                 <!--checked etiketi de hangisine yazılırsa o default olarak seçili gelir-->
+       </label>       
+
+       <label>
+
+        <input type="radio" name="cinsiyet" value="Kadin"> Kadın <br><br>
+
+       </label>
+
+       <!--label etiketi olmadan da kullanılabilir-->
+
+       
+            <input type="radio" name="cinsiyet" value="Erkek"> Erkek
+            <input type="radio" name="cinsiyet" value="Kadin"> Kadın <br><br>
+
+       <input required type="checkbox" checked><b>Kuralları kabul ediyorum</b><br><br> <!--checked etiketi ile checkbox sayfa açılır açılmaz seçili olarak getirtilebilir-->
+
+       <input id="1" type="checkbox" checked> <!--Bu şekilde checkbox seçili olarak gelsin istiyorsak checked etiketini kullanabiliriz-->
+       <label for="1"> Bu şekilde seçili checkbox da yapabiliyoruz </label> <br><br> <!-- Yine aynı şekilde text üzerine basıldığında checkbox checked/unchecked yapılabilir-->
+
+       <!-- Şöyle de bir kullanım var -->
+
+       <label> <!--Kullanıcı label/text e de bassa checkbox işaretlenmiş olur-->
+
+        <input type="checkbox"> <b>Bu yazının üstüne de bassan checkbox işaretlenir</b>
+
+       </label> <br><br>
+
+       <input type="submit" value="Gönder!" formaction="a.html"> <!--submit type nın formaction niteliği ile formun gönderileceği yere müdahele de edebililyoruz--> 
+       <input type="submit" value="Gönder2!" formmethod="POST" formtarget="_blank"> <!--formmethod niteliği ile yukarıdaki methodu değiştirebiliyoruz-->
+                                                                                         <!--formtarget ile gönderinin yeni bir sayfada mı yoksa aynı sayfada gösterilmesini istiyoruz onu belirleyebiliriz. _self aynı sayfa _blank farlı sekmede açar-->
+       <input type="reset" value="Sıfırla!">
+
+</fieldset>   
+
+    </form>
+
+    <br><br><br>
+
+    
+<fieldset>
+    <legend><b>Tarih,Saat,Zaman</b></legend>
+
+    <input type="color"> Color box ortaya çıkarır.<br><br>
+
+    <input type="date"> Calendar ortaya çıkarır.<br><br>
+
+    <input type="datetime-local"> Tarih ve Saat belirlemek için kullanılır. <br><br>
+
+    <input type="month"> Ay seçmek için kullanılır <br><br>
+
+    <input type="week"> Haftayı seçebilmek için kullanılır. <br><br>
+
+    <input type="number" min="1" max="10" required> Sayı belirlemek için kullanılır. <br><br> <!--required etiketi ile eğer kullanıcı  manuel olarak 1-10 dışında birşey girerse bile uyarı verir-->
+
+    <input type="range" min="0" max="50" step="5"> Sliding holder aralık aracı <br><br><!--step etiketi ile atlama aralığı belirlenebilmektedir.-->
+    
+    <input type="search"> Search box çıkartmaya yarar. <br><br>
+
+    <input type="tel" value="Telefon numaranızı giriniz..."> Telefon numarası yazmak için. <br><br> <!--Eğer kullanıcı telefon veya tablet kullanıyorsa karşısına direk olarak sayı klavyesi çıkartır, text type dan farkı budur.-->
+    
+    <input type="time"> Zaman girebilmek için kullanılır. <br><br>
+
+    <input type="url" required> URL adresi girebilmek için kullanılır. <br><br> <!--required etiketi ile eğer bu alan boş bırakılırsa URL kontrollerini yaparak gerekli uyarıları kullanıcıya gösterir-->
+    
+ </fieldset> <br>
+
+ <fieldset> 
+     <legend><b>Seçenekler</b></legend>
+
+    <input list="diller" name="diller" form="form1"> Lütfen bir dil seçiniz...<!--Bu input gibi form etikei dışında bir inputu form için kullanmak istiyorsak bu şekilde form etiketi içine formun id sini girmemiz gerekir. Aynı şekilde yukarıda form etiketi için de bir id girilmelidir-->
+      <datalist id="diller">                                                  <!--name de seçilenin arka planda yazılım için kullanılabilmesini sağlar formu gönderirken-->
+           <option value="HTML">
+           <option value="CSS">
+           <option value="JavaScript">
+      </datalist> <br><br>
+
+     <select name="diller" autofocus required> 
+        <option value="css" selected>CSS</option> <!--selected seçeneği ile direk seçili olarak hangisi gelmesi isteniyorsa belirlenebilir-->
+        <option value="html">HTML</option>
+        <option value="js">JavaScript</option>
+    </select> <u> Lütfen bir dil seçiniz...</u> <br><br>
+
+    <select name="diller[]" autofocus required multiple size="7"> <!--multiple niteliği eklendiğinde listenin görünümü de değişiyor,ayrıca yazılım dili açısında name kısmı name="diller[]" şeklinde değiştirilmelidir-->
+                                                                  <!--Çok fazla sayıda varsa scrollable olur ve size  niteliği ile gösterilmek istenen seçeneğin sayısı belirlenebilir-->
+        <option value="css" selected>CSS</option> <!--selected niteliği ile hangi seçenek seçili olarak gösteriliyorsa o belirlenebilir-->
+        <option value="html">HTML</option>
+        <option value="js">JavaScript</option>
+        <option value="css">CSS</option> 
+        <option value="js">JavaScript</option>
+        <option value="css">CSS</option> 
+        <option value="html">HTML</option>
+        <option value="js">JavaScript</option>
+    </select> <u> Lütfen bir dil seçiniz...</u> <br><br>
+
+    <!--VEYA Seçenekler optgroup etiketi ile gruplandırılabilir ve label niteliği ile bunlara grup isim verilebilir-->
+
+    <select name="diller" > 
+        
+        <optgroup label="Front-end Diller">
+
+        <option value="css" selected>CSS</option> 
+        <option value="html">HTML</option>
+        <option value="js">JavaScript</option>
+
+        </optgroup>
+
+        <optgroup label="Back-end Diller">
+
+            <option value="php" selected>PHP</option> 
+            <option value="phyton">PHYTON</option>
+            <option value="js">JavaScript</option>
+    
+            </optgroup>
+
+    </select> <br><br>
+
+    <textarea placeholder="Bize kendinizden bahsediniz..." minlength="250" name="textarea" id="textarea" cols="60" rows="15"></textarea>
+    <!--Kullanıcının hakkında yazması istenilen birşeyler olduğunda bu kullanılabilir aksi takdirde input kullanmak çok mantıklı değil zaten-->
+    <br> <br>
+
+    <button type="submit"> Gönder! </button> <!--Gönderir-->
+    <button type="button"> Button </button> <!--Düz button-->
+    <button type="reset"> Sıfırla! </button> <!--Resetler-->
+
+</fieldset>
+
+</body>
+
+</html>
