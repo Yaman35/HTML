@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-
-    <html lang="tr">
-
+<html lang="tr">
 <head>
-
     <meta charset="utf-8">
-
 <title> MEDYA ETİKETLERİ </title>  
 
 </head>
@@ -13,6 +9,9 @@
 <body>
 
     <audio controls loop muted> <!-- 2 Çeşit kullanımı mevcuttur-->
+        <!--Burada controls, audio kontrollerinin cikmasi icin yazilmistir-->
+        <!--loop , audio cycle halinde oynatilmaya devam eder-->
+        <!--muted ise, ilk default olarak sessiz gelsin anlamindadir-->
 
         <source src="mp3/inna-maza-jaja-official.mp3" type="audio/mpeg">
 
@@ -20,13 +19,15 @@
 
     </audio>
 
+
     <br><br> <!-- Veya aşağıdaki şekilde de kullanılabilir-->
+
 
     <audio controls src="mp3/inna-maza-jaja-official.mp3"></audio>
 
     <br><br><br>
 
-    <video width="320" height="240" controls loop poster="img/Paranormal.jpg">
+    <video width="320" height="240" controls loop poster="img/Paranormal.jpg"> <!--Buradaki poster video oyanitilmadan once ekranda gozukecek resim olur-->
 
         <source src="video/test video.mp4" type="video/mp4">
 
@@ -35,11 +36,10 @@
 
             <!--Videolara altyazı ekleme formatı ise-->
 
-    <track src="subtitles-en.vtt" kind="subtitles" srclang="en" label="English">
-    <track src="subtitles-de.vtt" kind="subtitles" srclang="de" label="Deutsch">   <!-- şeklindedir-->
+        <track src="subtitles-en.vtt" kind="subtitles" srclang="en" label="English">
+        <track src="subtitles-de.vtt" kind="subtitles" srclang="de" label="Deutsch"> <!-- şeklindedir-->
 
     </video>
-
 
 </body>
 
